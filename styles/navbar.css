@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
+
+* {
+ margin: 0;
+ padding: 0;
+}
+
+:root {
+ --accent-1: #00CAFF;
+ --accent-2: #261FB3;
+}
+
+.navbar {
+ font-family: "Poppins", serif;
+ text-decoration: none;
+ background: #0095bb;
+ padding: 8px;
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+ background: var(--accent-1);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 15px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+ border-radius: 10px;
+ position: relative;
+}
+
+.menu{
+ display: flex;
+ gap: 40px;
+ margin: 10px;
+ flex-wrap: wrap;
+ flex-grow: 1;
+ justify-content: center;
+
+}
+
+li {
+ list-style: none;
+ display: inline-block;
+ font-size: 25px;
+ font-weight: bold;
+ color: #004d60;
+ background: #0fcefd;
+ cursor: pointer;
+ border-radius: 15px;
+ padding: 10px 20px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+li:hover {
+ background: var(--accent-2);
+ color: var(--accent-1);
+}
+
+.logo {
+ display: flex;
+ align-items: center;
+}
+
+.logo img {
+ width: 100px;
+}
+
+.log-out {
+ position: relative;
+ width: 110px;
+ height: 50px;
+}
+
+.log-out-btn {
+ position: relative;
+ width: 100%;
+ height: 100%;
+ font-size: 20px;
+ font-weight: 600;
+ font-family: "Poppins", serif;
+ border-radius: 15px;
+ cursor: pointer;
+ border: none;
+ outline: none;
+ color: #0fcefd;
+ background: #005e76;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.127);
+ padding-right: 25px;
+ overflow: hidden;
+ transition: color 0.3s ease;
+ z-index: 1;
+}
+
+.log-out-btn::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ right: 0;
+ height: 100%;
+ width: 0%;
+ background: var(--accent-2);
+ transition: width 0.3s ease;
+ z-index: -1;
+}
+
+.log-out:hover .log-out-btn::before {
+ width: 100%;
+ left: 0;
+ right: auto;
+}
+
+.log-out i {
+ position: absolute;
+ color: #0fcefd;
+ right: 20px;
+ top: 50%;
+ transform: translateY(-50%);
+ pointer-events: none;
+ z-index: 2;
+}
+
+.bars-menu-btn {
+ display: none;
+ width: 50px;
+ height: 50px;
+ position: relative;
+}
+
+.fa-bars,
+.fa-xmark {
+ position: absolute;
+ width: max-content;
+ height: max-content;
+ inset: 0;
+ margin: auto;
+ font-size: 40px;
+ cursor: pointer;
+ color: var(--accent-2);
+ transition: 0.5s;
+}
+
+.fa-xmark {
+ opacity: 0;
+}
+
+@media (max-width: 830px) {
+ .menu {
+  gap: 30px;
+ }
+ li {
+  font-size: 20px;
+ }
+}
+
+@media (max-width: 746px) {
+ .menu {
+  gap: 20px;
+ }
+ li {
+  font-size: 15px;
+ }
+}
+
+@media (max-width: 1130px) {
+ .menu {
+  position: absolute;
+  opacity: 0;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  padding: 15px 10px;
+  width: 90%;
+  margin: 0;
+  border-radius: 0 0 10px 10px;
+  gap: 10px;
+ }
+ .show-x-bars .fa-bars {
+  opacity: 0;
+ }
+ .show-x-bars .fa-xmark {
+  opacity: 1;
+  transform: rotate(90deg);
+ }
+ .show-menu {
+  transition: 0.5s ease;
+  opacity: 1;
+ }
+ .bars-menu-btn {
+  display: block;
+ }
+ .log-out {
+  display: none;
+ }
+ li {
+  background: var(--accent-1);
+ }
+}

@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
+
+:root {
+ --accent-1: #00CAFF;
+ --accent-2: #261FB3;
+}
+
+* {
+ padding: 0;
+ margin: 0;
+}
+
+body::-webkit-scrollbar {
+ display: none;
+}
+
+#file-input {
+ display: none;
+}
+
+section {
+  position: relative;
+ padding: 3rem 2rem;
+ display: flex;
+ justify-content: center;
+ height: 100vh;
+}
+
+#upload-container img {
+ width: 300px;
+ height: 300px;
+ object-fit: cover;
+ border-radius: 5px;
+}
+
+#upload-container {
+ display: flex;
+ justify-content: center;
+ gap: 20px;
+ max-width: 1300px;
+ height: fit-content;
+ flex-wrap: wrap;
+}
+
+nav {
+  padding: 1.5rem 2rem;
+  background: var(--accent-1);
+  display: flex;
+  justify-content: center;
+}
+
+.upload-image button {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ padding: 10px 20px;
+ font-size: 24px;
+ cursor: pointer;
+ background: none;
+ border: none;
+ outline: 3px dashed;
+ color: var(--accent-2);
+ font-family: "Poppins", serif;
+ font-weight: 500;
+}
+
+.memories-nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ width: 1500px;
+}
+
+.title-and-go-back {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+}
+
+.title-and-go-back h1 {
+ font-family: "Poppins", serif;
+ font-size: 40px;
+ color: var(--accent-2);
+}
+
+.title-and-go-back i {
+ background-color: var(--accent-2);
+ color: var(--accent-1);
+ padding: 15px;
+ border-radius: 50%;
+ font-size: 20px;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--accent-2);
+  font-family: "Poppins", serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 45px;
+  padding: 20px 15px;
+  width: 1500px;
+}
+
+.footer-container li {
+  display: inline-block;
+  color: var(--accent-1);
+}
+
+.warning-board {
+  font-family: "Poppins", serif;
+  height: fit-content;
+  text-align: center;
+  margin: 0 20px;
+  background: rgba(128, 128, 128, 0.368);
+  padding: 20px 25px;
+}
+
+.fa-heart {
+  font-size: 23px;
+  color: var(--accent-2);
+  position: absolute;
+  top: -5vh;
+  transform: translateX(0%);
+  z-index: -1;
+  left: 0;
+  animation: fall 3s ease-in;
+}
+
+.img-item {
+  outline: 2px solid var(--accent-2);
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
