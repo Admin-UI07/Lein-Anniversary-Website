@@ -8,7 +8,7 @@ function showNav() {
  const navBarHTML = `
   <div class="nav">
       <div class="logo">
-        <img src="/img/leo-shine-logo.png" alt="image-logo">
+        <img src="img/leo-shine-logo.png" alt="image-logo">
       </div>
 
       <div class="menu">
