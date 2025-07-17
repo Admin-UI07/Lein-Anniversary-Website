@@ -1,5 +1,3 @@
-checkUser();
-
 let navBar = document.querySelector('.js-navbar');
 
 showNav();
@@ -54,13 +52,6 @@ menuItem.forEach(item => {
     }
   });
 });
-
-function checkUser() {
-  if (localStorage.getItem('authenticated') !== 'true') {
-    window.location.replace('login-page.html');
-    return;
-  }
-}
 
 const showMenu = (toggleId, navId) => {
   const toggle = document.querySelector(toggleId);

@@ -1,3 +1,5 @@
+checkUser();
+
 const audioPLayers = Array.from(document.querySelectorAll('.music-boxes')).map(box => ({
   element: box,
   audio: box.querySelector('audio'),
@@ -98,3 +100,10 @@ dreamHouseButton.addEventListener('click', () => {
   dreamHouseAddActive.classList.add('active');
   dreamHouseButton.classList.add('remove');
 });
+
+function checkUser() {
+  if (localStorage.getItem('authenticated') !== 'true') {
+    window.location.replace('login-page.html');
+    return;
+  }
+}

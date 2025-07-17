@@ -104,6 +104,7 @@ const savedData = JSON.parse(localStorage.getItem('todoSettings'));
 if (savedData) {
   document.querySelector('.img-top').src = savedData.image;
   document.querySelector('.todo-title').textContent = savedData.title;
+  document.querySelector('title').textContent = `Bond-Activity | ${savedData.title}?`;
   todoName.value = savedData.title
 }
 
@@ -117,4 +118,3 @@ function userCheck() {
     return;
   }
 }
-
