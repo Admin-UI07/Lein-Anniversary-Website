@@ -58,6 +58,7 @@ menuItem.forEach(item => {
 function checkUser() {
   if (localStorage.getItem('authenticated') !== 'true') {
     window.location.replace('login-page.html');
+    return;
   }
 }
 

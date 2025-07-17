@@ -1,8 +1,11 @@
+userCheck();
+
 const todoData = JSON.parse(localStorage.getItem('todoItems')) || [];
 const addButton = document.querySelector('.js-add-button');
 const todoWarning = document.querySelector('.todo-warning-display');
 const todoDisplayHide = document.querySelector('.todo-display-section');
 let warnText = '<img class="lonely-gif" src="/img/lonely.gif" alt=""><p class="warn-text">Empty Activities</p>';
+const arrowBack = document.querySelector('.fa-arrow-left');
 
 addButton.addEventListener('click', () => {
     getTodoList();
@@ -103,3 +106,15 @@ if (savedData) {
   document.querySelector('.todo-title').textContent = savedData.title;
   todoName.value = savedData.title
 }
+
+arrowBack.addEventListener('click', () => {
+  location.replace('index.html');
+})
+
+function userCheck() {
+  if (localStorage.getItem('authenticated') !== 'true') {
+    window.location.replace('login-page.html');
+    return;
+  }
+}
+

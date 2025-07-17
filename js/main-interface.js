@@ -51,7 +51,7 @@ todoBond.forEach(bonding => {
       image: bonding.todoImg,
       title: bonding.todoTitle
     }));
-    window.location.href = 'todo-bonds.html';
+    window.location.replace('todo-bonds.html');
   });
 });
 
