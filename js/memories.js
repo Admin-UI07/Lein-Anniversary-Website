@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const goBack = document.querySelector('.fa-arrow-left');
 
   goBack.addEventListener('click', () => {
-    location.replace('main.html');
+    location.replace('index.html');
   });
 
   function updateEmptyContainerWarning() {

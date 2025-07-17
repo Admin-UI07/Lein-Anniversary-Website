@@ -1,6 +1,5 @@
 if (localStorage.getItem('authenticated') === 'true') {
- window.location.replace('main.html');
-
+ window.location.replace('index.html');
 }
 
 const POSSIBLE_BONDS = ['Kumain', 'Gumala', 'Eating', 'Sumimba', 'Church', 'Pray', 'Talk about God'].map(item => item.toLowerCase());
@@ -30,7 +29,7 @@ logInForm.addEventListener('submit', (event) => {
 
  if (isValidBond && isCorrectDate) {
   localStorage.setItem('authenticated', 'true');
-  window.location.replace('main.html');
+  window.location.replace('index.html');
  } else {
   showError('Mali Mommy!');
  }

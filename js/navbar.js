@@ -46,7 +46,7 @@ menuItem.forEach(item => {
     const text = item.textContent.trim();
 
     if (text === 'HOME') {
-      window.location.replace('main.html');
+      window.location.replace('index.html');
     } else if (text === 'MEMORIES') {
       window.location.replace('memories.html');
     } else if (text === 'LETTERS') {
