@@ -6,6 +6,8 @@ const audioPLayers = Array.from(document.querySelectorAll('.music-boxes')).map(b
   button: box.querySelector('.play-buttons')
 }));
 
+console.log(audioPLayers);
+
 let currentAudio;
 
 audioPLayers.forEach(player => {
@@ -59,11 +61,11 @@ todoBond.forEach(bonding => {
 
 // img-puzzle ==>
 
-onload = resetImage();
+resetImage();
 
 document.querySelector('.reset-img-puzzle')
   .addEventListener('click', () => {
-    onload = resetImage();
+    resetImage();
   });
 
 function resetImage() {
@@ -107,3 +109,18 @@ function checkUser() {
     return;
   }
 }
+
+const footerNav = Array.from(document.querySelectorAll('.footer-nav')).map(navTo => ({
+  element: navTo
+}));
+
+footerNav.forEach(navButton => {
+  navButton.element.addEventListener('click', () => {
+    const f_nav = navButton.element.textContent.toLowerCase();
+    if (f_nav === 'home') {
+      window.location.replace('index.html');
+      return;
+    }
+    window.location.replace(`${f_nav}.html`);
+  });
+});

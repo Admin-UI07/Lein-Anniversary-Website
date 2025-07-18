@@ -137,8 +137,26 @@ footer {
   animation: fall 3s ease-in;
 }
 
+.fa-trash {
+  color: var(--accent-1);
+  cursor: pointer;
+}
+
+.fa-trash:hover {
+  opacity: 0.8;
+}
+
 .img-item {
   outline: 2px solid var(--accent-2);
+}
+
+.ftr-nav {
+  cursor: pointer;
+}
+
+.ftr-nav:hover {
+  text-decoration: underline;
+  opacity: 0.8;
 }
 
 @keyframes fall {

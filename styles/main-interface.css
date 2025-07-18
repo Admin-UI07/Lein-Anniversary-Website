@@ -45,7 +45,7 @@ body {
 }
 
 .welcome-messages {
- position: absolute;
+	position: absolute;
  top: 50%;
  left: 10px;
  transform: translateY(-50%);
@@ -565,6 +565,14 @@ footer {
 
 .footer-content h3 {
   color: #140d9a;
+}
+
+.footer-nav {
+  cursor: pointer;
+}
+
+.footer-nav:hover {
+  text-decoration: underline;
 }
 
 .social-item {

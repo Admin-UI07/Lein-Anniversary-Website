@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+  userCheck();
+
  const fileInput = document.getElementById('file-input');
  const fileButton = document.getElementById('upload-button');
  const imgPreview = document.getElementById('upload-container');
@@ -119,11 +121,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const clrButton = document.createElement('button');
-  clrButton.textContent = 'clear all images';
+  const ftrDeleteAllBtn = document.querySelector('.ftr-delete-all-btn');
 
-  clrButton.addEventListener('click', async () => {
+  ftrDeleteAllBtn.addEventListener('click', async () => {
     if (confirm('are you sure about that?')) {
+      location.reload();
       await clearAllImages();
       imgPreview.innerHTML = '';
       updateEmptyContainerWarning();
@@ -160,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
         warningBoard.className = 'warning-board';
 
         const mainTextWarning = document.createElement('h1');
-        mainTextWarning.textContent = 'Empty Image Container';
+        mainTextWarning.textContent = 'Aray ko! Walang Image.';
 
         const mainParagraphWarning = document.createElement('p');
         mainParagraphWarning.textContent = 'Yun lang, walang pictures mommy. Need na natin mag upload.';
@@ -194,5 +196,31 @@ document.addEventListener('DOMContentLoaded', () => {
   hearts();
 
   setInterval(hearts, 200);
+
+
+  const footerCtr = document.querySelector('.footer-container');
+  const footerNav = Array.from(footerCtr.querySelectorAll('.ftr-nav')).map(ftr_nav => ({
+    ftr_nav
+  }));
+  
+
+  footerNav.forEach(navBtn => {
+    navBtn.ftr_nav.addEventListener('click', () => {
+      const navName = navBtn.ftr_nav.textContent.toLowerCase();
+      if (navName === 'home') {
+        window.location.replace('index.html');
+        return;
+      }
+      window.location.replace(`${navName}.html`);
+    });
+  })
+
+
+  function userCheck() {
+    if (localStorage.getItem('authenticated') !== 'true') {
+      window.location.replace('login-page.html');
+      return;
+    }
+  }
   
 });
