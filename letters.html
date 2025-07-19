@@ -1,11 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" href="styles/letters.css">
  <title>Our Letters</title>
 </head>
+
 <body>
- 
+ <nav>
+  <div class="letters-nav">
+   <div class="title-go-back">
+    <i class="fa-solid fa-arrow-left"></i>
+    <h1>OUR LETTERS</h1>
+   </div>
+
+   <div class="upload-letter">
+    <button class="open-modal"><i class="fa-solid fa-envelope"></i>Upload a Letter</button>
+   </div>
+  </div>
+ </nav>
+
+ <section class="input-modal-section">
+  <div class="modal-overlay"></div>
+
+  <div class="input-modal-container">
+   <div class="modal-header">
+    <h1>New letters in mind?</h1>
+   </div>
+   <div class="sections title-section">
+    <label for="">Title:</label>
+    <input class="input-title" type="text" placeholder="Anong pamagat?" maxlength="20">
+   </div>
+   <div class="sections main-letter-section">
+    <label for="">Main Letter:</label>
+    <textarea class="input-main-text" placeholder="Mga gusto mong sabihin?" rows="5"></textarea>
+   </div>
+   <div class="sections author-section">
+    <label for="">Author:</label>
+    <input class="input-author" type="text" placeholder="Sino ang sumulat?" maxlength="15">
+   </div>
+   <div class="submit-btn-container">
+    <button class="modal-submit-btn">Submit</button>
+   </div>
+  </div>
+ </section>
+
+ <section class="uploaded-letters-container">
+  <div class="letters-child-container"></div>
+ </section>
+
+  <footer>
+  <div class="footer-container">
+   <li>© LEIN 2nd Anniversary</li>
+   <li class="ftr-nav">HOME</li>
+   <li class="ftr-nav">MEMORIES</li>
+   <li class="ftr-nav">LETTERS</li>
+   <i class="fa-solid fa-trash ftr-delete-all-btn"></i>
+  </div>
+ </footer>
 </body>
+
+<script src="js/letters.js"></script>
+
 </html>

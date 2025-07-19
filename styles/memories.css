@@ -21,7 +21,7 @@ body::-webkit-scrollbar {
 }
 
 section {
-  position: relative;
+ position: relative;
  padding: 3rem 2rem;
  display: flex;
  justify-content: center;
